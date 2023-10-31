@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+<body>
+    <!-- Adds two numbers and returns the results -->
+    <script>
+        function addnumbers(num1,num2){
+            return num1+num2;
+        }
+        const results= addnumbers(10,20);
+        console.log(results);
+
+        // check if a number is even
+        function even(num){
+            return num % 2===0
+        }
+        const evennumber = even(5)
+        console.log(evennumber);
+
+        //finds and retuns the largest number in an array
+
+        function largestnumber(arr){
+            if(arr.length==0){
+                return undefined;   
+            }
+            let max=arr[0];
+            for(let i=1;i<arr.length;i++){
+                if(arr[i]>max){
+                    max=arr[i];
+                }
+            }
+            return max;
+        }
+        const numbers= [2,1,4,5,3];
+        const largestnum= largestnumber(numbers);
+        console.log(largestnum);
+
+        //checks if a string is a palindrome (reads the same forwards and backward)
+
+        function isPalindrome(str) {
+
+        const cleanStr = str.replace(/ /g, "").toLowerCase();
+  
+        const reversedStr = cleanStr.split('').reverse().join('');
+  
+        return cleanStr === reversedStr;
+        }   
+        console.log("is palindrome " + isPalindrome("mom"));
+        console.log(isPalindrome("A man a plan a canal Panama"));
+        console.log(isPalindrome("hello"));
+
+        //function that calculates the factorial of a number.
+        function factorial(n){
+            if(n<0){
+                return "number has to be positive"
+            }
+            if(n==0 || n==1){
+                return 1;
+            }
+        else{
+            return n* factorial(n-1)            
+        }
+    }
+    let n = 5;
+    answer = factorial(n)
+    console.log("Factorial of " + n + " : " + answer);
+
+    //function that calculates the sum of all numbers from 1 to a given number n
+
+    function sumAllNum(n){
+        if(n<1){
+            return n=0
+        }
+        let sum=0
+        for(let i=1; i<=n;i++){
+            sum += i;
+        }
+        return sum;
+    }
+    console.log(sumAllNum(3));
+
+
+    //function that counts the number of vowels in a given string
+
+    function countVowels(str){
+            str=str.toLowerCase();
+            let count=0;
+            for(let i=0; i<str.length;i++){
+                if(str[i]==='a'||str[i]==='e'||str[i]==='i'||str[i]==='o'||str[i]==='u'){
+                    count++;
+                }
+            }
+            return count;
+        }
+        let str="dsfkkmaiodmdmvmm";
+        console.log(countVowels(str));
+
+
+    // function that reverses a string
+    function reverse(str){
+            let revstr="";
+            let len = str.length;
+            for(let i= len-1;i>=0;i--) {
+                revstr+=str[i];
+            }
+            return revstr;
+        }
+        let strings="good morning";
+        console.log("Reversed String: "+reverse(strings));
+
+        //finds the first and last elements of an array and returns them as a new array.
+
+        function firstNlast(arr){
+            let len=arr.length;
+            let a=arr[0];
+            let b=arr[len-1];
+            let array=[a,b]
+            return array;
+        }
+        const number= [2,1,4,5,6];
+        console.log("Array: "+number+" First and Last elements of the array: "+firstNlast(number));
+
+
+        //function that checks if a number is a prime number.
+
+
+
+        function checkPrime(n){
+            let count=0;
+            for(let i=0; i<=n; i++){
+                if(n%i===0){
+                    count++;
+                }
+            }
+            if(count>2){
+                console.log("It is not a Prime number");
+            }
+            else{
+                console.log("It is a Prime number");
+            }
+        }
+        checkPrime(11);
+
+
+    </script>
+</body>
+</html>
