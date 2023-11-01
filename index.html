@@ -10,9 +10,9 @@
     <script>
         // Adds two numbers and returns the results
         function addnumbers(num1,num2){
-            return num1+num2;
+            return num1 + num2;
         }
-        const results= addnumbers(10,20);
+        const results= addnumbers(10, 20);
         console.log(results);
 
         // check if a number is even
@@ -25,19 +25,19 @@
         //finds and retuns the largest number in an array
 
         function largestnumber(arr){
-            if(arr.length==0){
+            if(arr.length == 0){
                 return undefined;   
             }
             let max=arr[0];
-            for(let i=1;i<arr.length;i++){
-                if(arr[i]>max){
-                    max=arr[i];
+            for(let i=1; i<arr.length; i++){
+                if(arr[i] > max){
+                    max = arr[i];
                 }
             }
             return max;
         }
-        const numbers= [2,1,4,5,3];
-        const largestnum= largestnumber(numbers);
+        const numbers = [2,1,4,5,3];
+        const largestnum = largestnumber(numbers);
         console.log(largestnum);
 
         //checks if a string is a palindrome (reads the same forwards and backward)
@@ -59,11 +59,11 @@
             if(n<0){
                 return "number has to be positive"
             }
-            if(n==0 || n==1){
+            if(n == 0 || n == 1){
                 return 1;
             }
         else{
-            return n* factorial(n-1)            
+            return n * factorial(n-1)            
         }
     }
     let n = 5;
@@ -73,11 +73,11 @@
     //function that calculates the sum of all numbers from 1 to a given number n
 
     function sumAllNum(n){
-        if(n<1){
+        if(n < 1){
             return n=0
         }
         let sum=0
-        for(let i=1; i<=n;i++){
+        for(let i=1; i<=n; i++){
             sum += i;
         }
         return sum;
@@ -89,8 +89,8 @@
 
     function countVowels(str){
             str=str.toLowerCase();
-            let count=0;
-            for(let i=0; i<str.length;i++){
+            let count = 0;
+            for(let i=0; i<str.length; i++){
                 if(str[i]==='a'||str[i]==='e'||str[i]==='i'||str[i]==='o'||str[i]==='u'){
                     count++;
                 }
@@ -105,21 +105,21 @@
             function reverse(str){
             let revstr="";
             let len = str.length;
-            for(let i= len-1;i>=0;i--) {
-                revstr+=str[i];
+            for(let i= len-1; i>=0; i--) {
+                revstr += str[i]; 
             }
             return revstr;
         }
         let strings="good morning";
-        console.log("Reversed String: "+reverse(strings));
+        console.log("Reversed String: "+ reverse(strings));
 
         //finds the first and last elements of an array and returns them as a new array.
 
         function firstNlast(arr){
-            let len=arr.length;
-            let a=arr[0];
-            let b=arr[len-1];
-            let array=[a,b]
+            let len = arr.length;
+            let a = arr[0];
+            let b = arr[len-1];
+            let array = [a,b]
             return array;
         }
         const number= [2,1,4,5,6];
@@ -128,13 +128,13 @@
 
         //function that checks if a number is a prime number.
         function checkPrime(n){
-            let count=0;
+            let count = 0;
             for(let i=0; i<=n; i++){
                 if(n%i===0){
                     count++;
                 }
             }
-            if(count>2){
+            if(count > 2){
                 console.log("It is not a Prime number");
             }
             else{
@@ -143,5 +143,6 @@
         }
         checkPrime(11);
     </script>
+
 </body>
 </html>
